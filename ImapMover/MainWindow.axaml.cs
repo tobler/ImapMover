@@ -296,11 +296,27 @@ public partial class MainWindow : Window
             Log("An error has occured: " + ex.Message);
         }
     }
+    private int CountLines(string str)
+    {
+        if (str == null)
+            throw new ArgumentNullException("str");
+        if (str == string.Empty)
+            return 0;
+        int index = -1;
+        int count = 0;
+        while (-1 != (index = str.IndexOf(Environment.NewLine, index + 1)))
+            count++;
 
+        return count + 1;
+    }
     private void Log(string message)
     {
         Dispatcher.UIThread.Post(() =>
         {
+            if (CountLines(logmessages.Text)>500)
+            {
+                logmessages.Text = "";
+            }
             logmessages.Text += message + Environment.NewLine;
 
             // Set the CaretIndex to the end of the text to scroll down
