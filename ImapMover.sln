@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImapMover", "ImapMover\ImapMover.csproj", "{B868115A-BB94-4B93-BE11-1FE49ED4867D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B868115A-BB94-4B93-BE11-1FE49ED4867D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B868115A-BB94-4B93-BE11-1FE49ED4867D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B868115A-BB94-4B93-BE11-1FE49ED4867D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B868115A-BB94-4B93-BE11-1FE49ED4867D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7750C478-CD2C-4E2D-8F4D-6FF642CFAB95}
+	EndGlobalSection
+EndGlobal

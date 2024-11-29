@@ -1,0 +1,68 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="400" Width="820" Height="660" CanResize="False"
+        x:Class="ImapMover.MainWindow" Padding="10"
+        Title="ImapMover">
+	<StackPanel Background="White" Orientation="Vertical" Margin="10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top" Width="800">
+		<StackPanel Orientation="Horizontal" Width="800">
+
+			<StackPanel Orientation="Vertical" Width="400">
+				<TextBlock FontSize="18" FontWeight="Bold" Margin="0,0,0,20">Source Server</TextBlock>
+				<StackPanel Orientation="Horizontal" Width="400">
+					<TextBlock Width="100">IMAP Server:</TextBlock>
+					<TextBox x:Name="SourceImapServer" Watermark="Enter the URL of the source IMAP Server"  Width="290"></TextBox>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Width="400">
+					<TextBlock Width="100">Username:</TextBlock>
+					<TextBox x:Name="SourceUsername" Watermark="Enter your Username"  Width="290"></TextBox>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Width="400">
+					<TextBlock Width="100">Password:</TextBlock>
+					<TextBox x:Name="SourcePassword" PasswordChar="*" Watermark="Enter your password"  Width="290"></TextBox>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Width="400">
+					<TextBlock Width="100">Port:</TextBlock>
+					<TextBox x:Name="SourceImapServerPort" Text="993" Width="60"></TextBox>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Width="400">
+					<TextBlock Width="100">Use SSL:</TextBlock>
+					<CheckBox x:Name="SourceImapServerUseSSL" IsChecked="True"></CheckBox>
+				</StackPanel>
+			</StackPanel>
+			<StackPanel Orientation="Vertical" Width="400">
+				<TextBlock FontSize="18" FontWeight="Bold" Margin="0,0,0,20">Destination Server</TextBlock>
+				<StackPanel Orientation="Horizontal" Width="400">
+					<TextBlock Width="100">IMAP Server:</TextBlock>
+					<TextBox x:Name="DestinationImapServer" Watermark="Enter the URL of the destination IMAP Server" Width="290"></TextBox>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Width="400">
+					<TextBlock Width="100">Username:</TextBlock>
+					<TextBox x:Name="DestinationUsername" Watermark="Enter your Username"  Width="290"></TextBox>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Width="400">
+					<TextBlock  Width="100">Password:</TextBlock>
+					<TextBox x:Name="DestinationPassword" PasswordChar="*" Watermark="Enter your password" Width="290"></TextBox>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Width="400">
+					<TextBlock Width="100">Port:</TextBlock>
+					<TextBox x:Name="DestinationImapServerPort" Text="993" Width="60"></TextBox>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Width="400">
+					<TextBlock Width="100">Use SSL:</TextBlock>
+					<CheckBox x:Name="DestinationImapServerUseSSL" IsChecked="True" ></CheckBox>
+				</StackPanel>
+
+			</StackPanel>
+		</StackPanel>
+		<TextBlock Foreground="Red" x:Name="errormessage" ></TextBlock>
+		<Button x:Name="StartButton" Margin="0,20,0,0" Width="800" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Click="Button_OnClick">Click here to start</Button>
+		<ProgressBar Margin="0 10" Height="20" Width="800" x:Name="progressBar"
+                     Minimum="0" Maximum="100" Value="0"
+                     ShowProgressText="True" />
+		<TextBox x:Name="logmessages" Height="300" IsReadOnly="True" TextWrapping="Wrap" Margin="0,20,0,0"/>
+	</StackPanel>
+</Window>
